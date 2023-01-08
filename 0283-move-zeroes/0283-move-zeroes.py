@@ -6,4 +6,4 @@ class Solution:
         for num in nums:
             if num == 0:
                 zero = nums.pop(nums.index(num))
-                nums.append(0)
+                nums.append(zero)
