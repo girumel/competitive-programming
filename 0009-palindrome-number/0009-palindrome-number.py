@@ -6,11 +6,11 @@ class Solution:
             return True
         else:
             tmp = x
-            inv = ''
+            inv = []
             while tmp != 0:
-                inv += str(tmp % 10)
+                inv.append(str(tmp % 10))
                 tmp //= 10
-            if x == int(inv):
+            if x == int(''.join(inv)):
                 return True
             else:
                 return False
