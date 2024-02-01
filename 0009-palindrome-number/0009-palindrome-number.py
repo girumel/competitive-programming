@@ -10,8 +10,7 @@ class Solution:
             while tmp != 0:
                 inv.append(str(tmp % 10))
                 tmp //= 10
-            if x == int(''.join(inv)):
+            if x == int("".join(inv)):
                 return True
             else:
                 return False
-        
