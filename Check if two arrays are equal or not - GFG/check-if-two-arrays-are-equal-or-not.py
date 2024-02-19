@@ -5,8 +5,20 @@ class Solution:
     # Function to check if two arrays are equal or not.
     def check(self, A, B, N):
         # return: True or False
-
-        return (set(A) == set(B)) and (len(A) == len(B))
+        
+        if len(A) != len(B):
+            return False
+        
+        count = {}
+        for num in A:
+            count[num] = count.get(num, 0) + 1
+        
+        for num in B:
+            if num not in count or count[num] == 0:
+                return False
+            count[num] -= 1
+        
+        return True
 
 
 # {
