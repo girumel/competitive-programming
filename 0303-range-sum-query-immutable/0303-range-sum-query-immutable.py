@@ -5,6 +5,7 @@ class NumArray:
 
     def sumRange(self, left: int, right: int) -> int:
         prefix_sum = 0
+        
         for i in range(left, right + 1):
             prefix_sum += self.nums[i]
         return prefix_sum
