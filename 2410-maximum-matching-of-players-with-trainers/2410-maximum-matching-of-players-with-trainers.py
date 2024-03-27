@@ -3,12 +3,16 @@ class Solution:
         players.sort()
         trainers.sort()
         matches = 0
+
+        p = 0
+        t = 0
         
-        for player in players:
-            for trainer in trainers:
-                if player <= trainer:
-                    matches += 1
-                    trainers.remove(trainer)
-                    break
+        while p < len(players) and t < len(trainers):
+            if players[p] <= trainers[t]:
+                matches += 1
+                p += 1
+                t += 1
+            else:
+                t += 1
         
         return matches
